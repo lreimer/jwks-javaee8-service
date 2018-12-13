@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+
+  jwks-service:
+    build:
+      context: .
+    image: jwks-javaee8-service:1.0
+    ports:
+    - "8080:8080"
+    networks:
+    - jee8net
+
+networks:
+  jee8net:
+    driver: bridge
