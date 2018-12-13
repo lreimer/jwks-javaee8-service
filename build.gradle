@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'groovy'
+    id 'io.franzbecker.gradle-lombok' version '1.14'
+}
+
+repositories { jcenter() }
+
+lombok {
+    version = '1.18.2'
+    sha256 = ""
+}
+
+dependencies {
+    providedCompile 'javax:javaee-api:8.0'
+    providedCompile 'javax.cache:cache-api:1.1.0'
+
+    // compile 'com.auth0:java-jwt:3.4.1'
+    // compile 'com.auth0:jwks-rsa:0.6.1'
+
+    providedCompile 'com.nimbusds:nimbus-jose-jwt:6.5'
+
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    runtime 'org.slf4j:slf4j-jdk14:1.7.25'
+
+    testCompile 'org.spockframework:spock-core:1.2-groovy-2.5'
+}
