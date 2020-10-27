@@ -3,9 +3,15 @@
 .idea/
 *.iml
 
+.vscode/
+.settings/
+.project
+.classpath
+
 /build/
 /target/
 /out/
+bin/
 
 # Ignore Gradle GUI config
 gradle-app.setting
